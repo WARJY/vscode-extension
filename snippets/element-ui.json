@@ -1,0 +1,14 @@
+{
+	"confirm": {
+		"scope": "javascript,typescript",
+		"prefix": "confirm",
+		"body": [
+			"this.$confirm(\"${1}\", \"确认\",{",
+			"    type: \"warning\",",
+			"}).then(()=>{",
+			"    ${2}",
+			"})"
+		],
+		"description": "confirm code block"
+	}
+}

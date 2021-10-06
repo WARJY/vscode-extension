@@ -1,0 +1,96 @@
+{
+	"forEach": {
+		"scope": "javascript,typescript",
+		"prefix": ".forEach",
+		"body": [
+			".forEach((${1:item},${2:index})=>{",
+			"    ${3}",
+			"})"
+		],
+		"description": "forEach code block"
+	},
+	"map": {
+		"scope": "javascript,typescript",
+		"prefix": ".map",
+		"body": [
+			".map((${1:item},${2:index})=>{",
+			"    return ${3}",
+			"})"
+		],
+		"description": "map code block"
+	},
+	"filter": {
+		"scope": "javascript,typescript",
+		"prefix": ".filter",
+		"body": [
+			".filter((${1:item},${2:index})=>{",
+			"    return ${3}",
+			"})"
+		],
+		"description": "filter code block"
+	},
+	"some": {
+		"scope": "javascript,typescript",
+		"prefix": ".some",
+		"body": [
+			".some((${1:item},${2:index})=>{",
+			"    return ${3}",
+			"})"
+		],
+		"description": "some code block"
+	},
+	"reduce": {
+		"scope": "javascript,typescript",
+		"prefix": ".reduce",
+		"body": [
+			".reduce((total,${2:item},${3:index})=>{",
+			"    return ${4}",
+			"},${1:''})"
+		],
+		"description": "reduce code block"
+	},
+	"includes": {
+		"scope": "javascript,typescript",
+		"prefix": ".includes",
+		"body": [
+			".includes((${1:item},${2:index})=>{",
+			"    return ${3}",
+			"})"
+		],
+		"description": "includes code block"
+	},
+	"find": {
+		"scope": "javascript,typescript",
+		"prefix": ".find",
+		"body": [
+			".find((${1:item},${2:index})=>{",
+			"    return ${3}",
+			"})"
+		],
+		"description": "find code block"
+	},
+	"console": {
+		"scope": "javascript,typescript",
+		"prefix": "console",
+		"body": [
+			"console.log(${1})"
+		],
+		"description": "console code block"
+	},
+	"copyArray": {
+		"scope": "javascript,typescript",
+		"prefix": "copy",
+		"body": [
+			"[].concat(${1})"
+		],
+		"description": "copyArray code block"
+	},
+	"copyObject": {
+		"scope": "javascript,typescript",
+		"prefix": "copy",
+		"body": [
+			"JSON.parse(JSON.stringfy(${1}))"
+		],
+		"description": "copyObject code block"
+	}
+}

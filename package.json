@@ -1,0 +1,135 @@
+{
+	"name": "vscode-plugin-billionbottle",
+	"displayName": "vscode-plugin-billionbottle",
+	"publisher": "gcc",
+	"description": "",
+	"version": "1.0.3",
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"main": "./src/extension.js",
+	"scripts": {
+		"test": "node ./test/runTest.js"
+	},
+	"contributes": {
+		"languages": [
+			{
+				"id": "vue-template",
+				"extensions": [
+					".vue"
+				]
+			}
+		],
+		"commands": [
+			{
+				"command": "extension.vue",
+				"title": "Vue"
+			},
+			{
+				"command": "extension.elForm",
+				"title": "ElForm"
+			},
+			{
+				"command": "extension.elSelect",
+				"title": "ElSelect"
+			},
+			{
+				"command": "extension.elInput",
+				"title": "ElInput"
+			},
+			{
+				"command": "extension.elTable",
+				"title": "ElTable"
+			},
+			{
+				"command": "extension.elTab",
+				"title": "ElTab"
+			},
+			{
+				"command": "extension.elDescript",
+				"title": "ElDescript"
+			},
+			{
+				"command": "extension.elDialog",
+				"title": "ElDialog"
+			},
+			{
+				"command": "extension.elTooltip",
+				"title": "ElTooltip"
+			},
+			{
+				"command": "extension.elPopover",
+				"title": "ElPopover"
+			},
+			{
+				"command": "extension.elPopconfirm",
+				"title": "ElPopconfirm"
+			},
+			{
+				"command": "extension.elCard",
+				"title": "ElCard"
+			},
+			{
+				"command": "extension.elDrawer",
+				"title": "ElDrawer"
+			},
+			{
+				"command": "extension.elButton",
+				"title": "ElButton"
+			},
+			{
+				"command": "extension.fetchData",
+				"title": "FetchData"
+			}
+		],
+		"snippets": [
+			{
+				"language": "javascript",
+				"path": "./snippets/javascript.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/element-ui.json"
+			},
+			{
+				"language": "vue-html",
+				"path": "./snippets/vue-template.json"
+			}
+		]
+	},
+	"activationEvents": [
+		"onCommand:extension.vue",
+		"onCommand:extension.elForm",
+		"onCommand:extension.elSelect",
+		"onCommand:extension.elInput",
+		"onCommand:extension.elTable",
+		"onCommand:extension.elTab",
+		"onCommand:extension.elDescript",
+		"onCommand:extension.elDialog",
+		"onCommand:extension.elTooltip",
+		"onCommand:extension.elPopover",
+		"onCommand:extension.elPopconfirm",
+		"onCommand:extension.elCard",
+		"onCommand:extension.elDrawer",
+		"onCommand:extension.elButton",
+		"onCommand:extension.fetchData"
+	],
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.41.0",
+		"eslint": "^6.6.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"vscode-test": "^1.2.2"
+	},
+	"dependencies": {
+		"axios": "^0.22.0",
+		"cutil": "^1.1.22"
+	}
+}

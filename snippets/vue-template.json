@@ -1,0 +1,9 @@
+{
+	"v-for": {
+		"prefix": "v-for",
+		"body": [
+			"v-for=\"(${2:item},index) in ${1:array}\" :key=\"index\""
+		],
+		"description": "v-for code block"
+	}
+}
