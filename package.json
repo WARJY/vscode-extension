@@ -3,7 +3,7 @@
 	"displayName": "vscode-plugin-billionbottle",
 	"publisher": "gcc",
 	"description": "",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -132,5 +132,5 @@
 		"axios": "^0.22.0",
 		"cutil": "^1.1.22"
 	},
-	"icon": "https://github.com/WARJY/vscode-extension/blob/master/icon.jpg"
+	"icon": "icon.jpg"
 }
