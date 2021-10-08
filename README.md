@@ -62,20 +62,22 @@ export default{
 2. 涉及变量及函数生成的命令会要求用户输入变量/函数的标识字段
 3. 在data和methods中声明组件所需的变量和函数
 
-| 命令         | 命令内容                                                                    |
-|--------------|-----------------------------------------------------------------------------|
-| vue          | 生成带有flag标识的vue组件模板                                               |
-| elForm       | 输入变量标识，生成**el-form**组件结构及**formData**                         |
-| elInput      | 输入变量标识，生成**el-input**组件结构及绑定变量                            |
-| elSelect     | 输入变量标识，生成**el-select**&**el-option**组件结构及绑定变量             |
-| elTable      | 输入变量标识，生成**el-table**组件结构及绑定变量，columns&formatter配置函数 |
-| elTab        | 输入变量标识，生成**el-tab**组件结构及绑定变量，tab切换函数                 |
-| elDialog     | 输入变量标识，生成**el-dialog**组件结构及绑定变量                           |
-| elDrawer     | 输入变量标识，生成**el-drawer**组件结构及绑定变量                           |
-| elDescript   | 生成**el-descript**&**el-descriptions-item**组件结构                        |
-| elTooltip    | 生成**el-tooltip**组件结构及绑定变量                                        |
-| elPopover    | 生成**el-popover**组件结构                                                  |
-| elPopconfirm | 生成**el-popconfirm**组件结构                                               |
-| elCard       | 生成**el-card**组件结构                                                     |
-| elButton     | 生成**el-button**组件结构                                                   |
-| fetchData    | 输入变量标识，生成**async dataFetch**函数模板                               |
+| 命令         | 命令内容                                                                                                                |
+|--------------|-------------------------------------------------------------------------------------------------------------------------|
+| vue          | 生成带有flag标识的vue组件模板                                                                                           |
+| flag         | 生成用于生成命令的flag标识                                                                                              |
+| elForm       | 输入变量标识，生成**el-form**组件结构及**formData**                                                                     |
+| elInput      | 输入变量标识，生成**el-input**组件结构及绑定变量                                                                        |
+| elSelect     | 输入变量标识，生成**el-select**&**el-option**组件结构及绑定变量                                                         |
+| elTable      | 输入变量标识，生成**el-table**组件结构及绑定变量，columns&formatter配置函数                                             |
+| elTab        | 输入变量标识，生成**el-tab**组件结构及绑定变量，tab切换函数                                                             |
+| elDialog     | 输入变量标识，生成**el-dialog**组件结构及绑定变量                                                                       |
+| elDrawer     | 输入变量标识，生成**el-drawer**组件结构及绑定变量                                                                       |
+| elDescript   | 生成**el-descript**&**el-descriptions-item**组件结构                                                                    |
+| elTooltip    | 生成**el-tooltip**组件结构及绑定变量                                                                                    |
+| elPopover    | 生成**el-popover**组件结构                                                                                              |
+| elPopconfirm | 生成**el-popconfirm**组件结构                                                                                           |
+| elCard       | 生成**el-card**组件结构                                                                                                 |
+| elButton     | 生成**el-button**组件结构                                                                                               |
+| fetchData    | 输入变量标识，生成**async dataFetch**函数模板                                                                           |
+| functions    | 输入函数名及参数，生成**methods**函数声明，如@click=""时输入test(a)，则填入@click="test(a)"，同时在methods声明test(a){} |
