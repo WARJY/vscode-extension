@@ -29,6 +29,10 @@
 				"title": "Vue"
 			},
 			{
+				"command": "extension.flag",
+				"title": "Flag"
+			},
+			{
 				"command": "extension.elForm",
 				"title": "ElForm"
 			},
@@ -83,6 +87,10 @@
 			{
 				"command": "extension.fetchData",
 				"title": "FetchData"
+			},
+			{
+				"command": "extension.functions",
+				"title": "Function"
 			}
 		],
 		"snippets": [
@@ -102,6 +110,7 @@
 	},
 	"activationEvents": [
 		"onCommand:extension.vue",
+		"onCommand:extension.flag",
 		"onCommand:extension.elForm",
 		"onCommand:extension.elSelect",
 		"onCommand:extension.elInput",
@@ -115,7 +124,8 @@
 		"onCommand:extension.elCard",
 		"onCommand:extension.elDrawer",
 		"onCommand:extension.elButton",
-		"onCommand:extension.fetchData"
+		"onCommand:extension.fetchData",
+		"onCommand:extension.functions"
 	],
 	"devDependencies": {
 		"@types/glob": "^7.1.1",

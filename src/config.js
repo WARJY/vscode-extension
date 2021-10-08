@@ -26,6 +26,11 @@ export default {
 </script>`
 }
 
+const flag = {
+    name: "extension.flag",
+    template: `${DATA_FLAG}${BR}${METHOD_FLAG}`
+}
+
 const elForm = {
     name: "extension.elForm",
     needInput: true,
@@ -67,7 +72,7 @@ const elTable = {
         let tableColumn = `<el-table-column v-for="(column, index) in ${field}Columns" :key="index" v-bind="column" />`
         let tableColumnOption = `<el-table-column label="操作">${BR}<template slot-scope="scope">${BR}<span>{{ scope.row }}</span>${BR}</template>${BR}</el-table-column>`
         return `<el-table :data="${field}List">${BR}${tableColumn}${BR}${tableColumnOption}${BR}</el-table>`
-    },  
+    },
     data(field) {
         return `${field}List: [],${BR}${field}Columns: [${BR}{ label: "label", prop: "prop", width: "100", formatter: this.formatter },${BR}],`
     },
@@ -81,7 +86,7 @@ const elTab = {
     template(field) {
         let tabPanel = `<el-tab-pane label="label" name="name"></el-tab-pane>`
         return `<el-tabs v-model="currentTab" type="card" @tab-click="handleTabClick">${BR}${tabPanel}${BR}</el-tabs>`
-    },  
+    },
     data(field) {
         return `currentTab:"name"`
     },
@@ -140,21 +145,21 @@ const elPopconfirm = {
     },
 }
 
-const elCard= {
+const elCard = {
     name: "extension.elCard",
     template(field) {
         return `<el-card header="header" shadow="never" :body-style="{padding:'20px'}">${BR}</el-card>`
     },
 }
 
-const elButton= {
+const elButton = {
     name: "extension.elButton",
     template(field) {
         return `<el-button type="primary"></el-button>`
     },
 }
 
-const fetchData= {
+const fetchData = {
     name: "extension.fetchData",
     needInput: true,
     template(field) {
@@ -172,8 +177,25 @@ const fetchData= {
     },
 }
 
+const functions = {
+    name: "extension.functions",
+    needInput: true,
+    template(field) {
+        return `${field}`
+    },
+    method(field) {
+        let params = ""
+        if (field.indexOf("(") > -1) {
+            params = field.match(/\((.+?)\)/g)
+        }
+        return `${field}{
+        },`
+    },
+}
+
 module.exports = {
     vue,
+    flag,
     elForm,
     elInput,
     elSelect,
@@ -188,5 +210,6 @@ module.exports = {
     elDrawer,
     elButton,
 
-    fetchData
+    fetchData,
+    functions
 }
