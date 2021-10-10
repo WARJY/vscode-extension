@@ -1,6 +1,6 @@
 const commands = require('./config')
 const vscode = require("vscode")
-const { DATA_FLAG, METHOD_FLAG } = require("./symbol.js")
+const { DATA_FLAG, METHOD_FLAG, COMPUTED_FLAG } = require("./symbol.js")
 const { is } = require("cutil")
 const { BR } = require("./util")
 
@@ -20,10 +20,10 @@ function activate(context) {
             // 全部替换模板
             if (command.replaceAll === true) {
                 await vscode.window.activeTextEditor.edit(async editBuilder => {
-                    let currentText = editBuilder._document.getText(range)
-                    currentText = `${command.template}${BR}${command.script}${BR}`
                     let end = new vscode.Position(vscode.window.activeTextEditor.document.lineCount + 1, 0);
                     let range = new vscode.Range(start, end)
+                    let currentText = editBuilder._document.getText(range)
+                    currentText = `${command.template}${BR}${command.script}${BR}`
                     editBuilder.replace(range, currentText)
                 });
             }
@@ -71,6 +71,24 @@ function activate(context) {
                     let textMethod = command.method
                     if (is(command.method) === Function) textMethod = command.method(input)
                     currentText = currentText.replace(METHOD_FLAG, `${textMethod}${BR}${METHOD_FLAG}`)
+
+                    editBuilder.replace(range, currentText)
+                });
+            }
+
+            // 处理computed
+            if (!command.replaceAll && command.computed) {
+                await vscode.window.activeTextEditor.edit(async editBuilder => {
+
+                    let end = new vscode.Position(vscode.window.activeTextEditor.document.lineCount + 1, 0);
+                    let range = new vscode.Range(start, end)
+                    let currentText = editBuilder._document.getText(range)
+
+                    if (command.needInput && !input) return vscode.window.showInformationMessage('组件变量标识为空，创建失败')
+
+                    let textComputed = command.computed
+                    if (is(command.computed) === Function) textComputed = command.computed(input)
+                    currentText = currentText.replace(COMPUTED_FLAG, `${textComputed}${BR}${COMPUTED_FLAG}`)
 
                     editBuilder.replace(range, currentText)
                 });

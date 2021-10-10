@@ -3,12 +3,20 @@
 		"scope": "javascript,typescript",
 		"prefix": "confirm",
 		"body": [
-			"this.$confirm(\"${1}\", \"确认\",{",
+			"this.\\$confirm(\"${1}\", \"确认\",{",
 			"    type: \"warning\",",
 			"}).then(()=>{",
 			"    ${2}",
 			"})"
 		],
 		"description": "confirm code block"
+	},
+	"message": {
+		"scope": "javascript,typescript",
+		"prefix": "message",
+		"body": [
+			"this.\\$message${1}(\"${2}\")"
+		],
+		"description": "message code block"
 	}
 }

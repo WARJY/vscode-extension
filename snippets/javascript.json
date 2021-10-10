@@ -92,5 +92,51 @@
 			"JSON.parse(JSON.stringfy(${1}))"
 		],
 		"description": "copyObject code block"
+	},
+	"setTimeout": {
+		"scope": "javascript,typescript",
+		"prefix": "setTimeout",
+		"body": [
+			"let timer = setTimeout(()=>{",
+			"    ${2}",
+			"    clearTimeout(timer)",
+			"}, ${1})"
+		],
+		"description": "setTimeout code block"
+	},
+	"setInterval": {
+		"scope": "javascript,typescript",
+		"prefix": "setInterval",
+		"body": [
+			"let timer = setInterval(()=>{",
+			"    ${2}",
+			"    clearInterval(timer)",
+			"}, ${1})"
+		],
+		"description": "setInterval code block"
+	},
+	"keys": {
+		"scope": "javascript,typescript",
+		"prefix": "keys",
+		"body": [
+			"Object.keys(${1})${2}"
+		],
+		"description": "keys code block"
+	},
+	"values": {
+		"scope": "javascript,typescript",
+		"prefix": "values",
+		"body": [
+			"Object.values(${1})${2}"
+		],
+		"description": "values code block"
+	},
+	"entries": {
+		"scope": "javascript,typescript",
+		"prefix": "entries",
+		"body": [
+			"Object.entries(${1})${2}"
+		],
+		"description": "entries code block"
 	}
 }

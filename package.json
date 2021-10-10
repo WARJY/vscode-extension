@@ -29,10 +29,6 @@
 				"title": "Vue"
 			},
 			{
-				"command": "extension.flag",
-				"title": "Flag"
-			},
-			{
 				"command": "extension.elForm",
 				"title": "ElForm"
 			},
@@ -91,6 +87,10 @@
 			{
 				"command": "extension.functions",
 				"title": "Function"
+			},
+			{
+				"command": "extension.computed",
+				"title": "Computed"
 			}
 		],
 		"snippets": [
@@ -105,12 +105,19 @@
 			{
 				"language": "vue-html",
 				"path": "./snippets/vue-template.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/vue-script.json"
+			},
+			{
+				"language": "javascript",
+				"path": "./snippets/gcc.json"
 			}
 		]
 	},
 	"activationEvents": [
 		"onCommand:extension.vue",
-		"onCommand:extension.flag",
 		"onCommand:extension.elForm",
 		"onCommand:extension.elSelect",
 		"onCommand:extension.elInput",
@@ -125,7 +132,8 @@
 		"onCommand:extension.elDrawer",
 		"onCommand:extension.elButton",
 		"onCommand:extension.fetchData",
-		"onCommand:extension.functions"
+		"onCommand:extension.functions",
+		"onCommand:extension.computed"
 	],
 	"devDependencies": {
 		"@types/glob": "^7.1.1",

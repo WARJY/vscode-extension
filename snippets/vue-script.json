@@ -1,0 +1,52 @@
+{
+	"props": {
+		"prefix": "props",
+		"body": [
+			"props:{",
+			"    ${1}:{",
+			"        type: ${2},",
+			"        default: ()=>${3}",
+			"    }",
+			"},"
+		],
+		"description": "props code block"
+	},
+	"watch": {
+		"prefix": "watch",
+		"body": [
+			"watch:{",
+			"    ${1}:{",
+			"        deep: true,",
+			"        immediate: true,",
+			"        handler(val, old){",
+			"            ${2}",
+			"        }",
+			"    }",
+			"},"
+		],
+		"description": "watch code block"
+	},
+	"routerPush": {
+		"prefix": "router",
+		"body": [
+			"this.\\$router.push({",
+			"    path: \"${1}\",",
+			"    query: {${2}},",
+			"    params: {${3}}",
+			"})"
+		],
+		"description": "routerPush code block"
+	},
+	"routerOpen": {
+		"prefix": "router",
+		"body": [
+			"const { href } = this.\\$router.resolve({",
+			"    path: \"${1}\",",
+			"    query: {${2}},",
+			"    params: {${3}}",
+			"})",
+			"window.open(href)"
+		],
+		"description": "routerOpen code block"
+	}
+}

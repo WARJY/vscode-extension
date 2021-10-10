@@ -1,17 +1,17 @@
-const { DATA_FLAG, METHOD_FLAG } = require('./symbol.js')
+const { DATA_FLAG, METHOD_FLAG, COMPUTED_FLAG } = require('./symbol.js')
 const { BR } = require("./util")
 
 const vue = {
     name: "extension.vue",
     replaceAll: true,
     template:
-        `<template>
+`<template>
     <div class="container">
 
     </div>
 </template>`,
     script:
-        `<script>
+`<script>
 export default {
     name: "",
     data(){
@@ -19,16 +19,15 @@ export default {
             ${DATA_FLAG}
         }
     },
+    computed:{
+        ${COMPUTED_FLAG}
+    },
     methods:{
         ${METHOD_FLAG}
     }
 }
-</script>`
-}
-
-const flag = {
-    name: "extension.flag",
-    template: `${DATA_FLAG}${BR}${METHOD_FLAG}`
+</script>
+`
 }
 
 const elForm = {
@@ -193,9 +192,21 @@ const functions = {
     },
 }
 
+const computed = {
+    name: "extension.computed",
+    needInput: true,
+    template(field) {
+        return `${field}`
+    },
+    computed(field) {
+        return `${field}(){
+            return
+        },`
+    },
+}
+
 module.exports = {
     vue,
-    flag,
     elForm,
     elInput,
     elSelect,
@@ -211,5 +222,6 @@ module.exports = {
     elButton,
 
     fetchData,
-    functions
+    functions,
+    computed
 }

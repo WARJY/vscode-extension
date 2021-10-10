@@ -1,0 +1,23 @@
+{
+	"dataFlag": {
+		"prefix": "flag",
+		"body": [
+			"/* DATA APPEND FLAG, dont del this line */"
+		],
+		"description": "dataFlag"
+	},
+	"methodFlag": {
+		"prefix": "flag",
+		"body": [
+			"/* METHOD APPEND FLAG, dont del this line */"
+		],
+		"description": "methodFlag"
+	},
+	"computedFlag": {
+		"prefix": "flag",
+		"body": [
+			"/* COMPUTED APPEND FLAG, dont del this line */"
+		],
+		"description": "computedFlag"
+	}
+}
