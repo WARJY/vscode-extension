@@ -29,6 +29,10 @@
 				"title": "Vue"
 			},
 			{
+				"command": "extension.list",
+				"title": "Vue List"
+			},
+			{
 				"command": "extension.elForm",
 				"title": "ElForm"
 			},
@@ -43,6 +47,10 @@
 			{
 				"command": "extension.elTable",
 				"title": "ElTable"
+			},
+			{
+				"command": "extension.elPage",
+				"title": "ElPage"
 			},
 			{
 				"command": "extension.elTab",
@@ -118,10 +126,12 @@
 	},
 	"activationEvents": [
 		"onCommand:extension.vue",
+		"onCommand:extension.list",
 		"onCommand:extension.elForm",
 		"onCommand:extension.elSelect",
 		"onCommand:extension.elInput",
 		"onCommand:extension.elTable",
+		"onCommand:extension.elPage",
 		"onCommand:extension.elTab",
 		"onCommand:extension.elDescript",
 		"onCommand:extension.elDialog",

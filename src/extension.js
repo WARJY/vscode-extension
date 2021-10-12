@@ -23,7 +23,7 @@ function activate(context) {
                     let end = new vscode.Position(vscode.window.activeTextEditor.document.lineCount + 1, 0);
                     let range = new vscode.Range(start, end)
                     let currentText = editBuilder._document.getText(range)
-                    currentText = `${command.template}${BR}${command.script}${BR}`
+                    currentText = command.template
                     editBuilder.replace(range, currentText)
                 });
             }

@@ -19,5 +19,12 @@
 			"/* COMPUTED APPEND FLAG, dont del this line */"
 		],
 		"description": "computedFlag"
+	},
+	"optionFlag": {
+		"prefix": "flag",
+		"body": [
+			"/* OPTION APPEND FLAG, dont del this line */"
+		],
+		"description": "optionFlag"
 	}
 }
