@@ -117,7 +117,7 @@
 	},
 	"keys": {
 		"scope": "javascript,typescript",
-		"prefix": "keys",
+		"prefix": ".keys",
 		"body": [
 			"Object.keys(${1})${2}"
 		],
@@ -125,7 +125,7 @@
 	},
 	"values": {
 		"scope": "javascript,typescript",
-		"prefix": "values",
+		"prefix": ".values",
 		"body": [
 			"Object.values(${1})${2}"
 		],
@@ -133,7 +133,7 @@
 	},
 	"entries": {
 		"scope": "javascript,typescript",
-		"prefix": "entries",
+		"prefix": ".entries",
 		"body": [
 			"Object.entries(${1})${2}"
 		],

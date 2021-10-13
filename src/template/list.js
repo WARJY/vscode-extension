@@ -15,7 +15,7 @@ module.exports = `
             </el-form-item>
 
             <el-button
-                @click="changePage(1)"
+                @click="handleCurrentChange(1)"
                 type="primary"
             >查 询
             </el-button>
@@ -23,7 +23,7 @@ module.exports = `
 
         <el-table :data="dataList">
             <el-table-column v-for="(column, index) in columns" :key="index" v-bind="column" />
-            <el-table-column label="操作">
+            <el-table-column label="操作" width="200">
                 <template slot-scope="scope">
                     <span>{{ scope.row }}</span>
                 </template>
